@@ -5,7 +5,7 @@ class Solution:
     def moveZeros(self,nums:list[int]) -> list[int]:
         lastpos=0                           #lastpos=0 无意义但代入nums[lastpos]就表示lastpos是从索引0开始运动实现位置交换
         for current in range(len(nums)):
-            if nums[current] != 0:
+            if nums[current] != 0:          #if做判断后将结果给for循环，而如果用while则是把结果返回给while，一直循环，不能用while
                 nums[current],nums[lastpos] = nums[lastpos],nums[current]
                 lastpos += 1
         return nums
