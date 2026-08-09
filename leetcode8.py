@@ -1,5 +1,5 @@
 #19题 删除倒数第n个链表
-# 依旧快慢指针
+#依旧快慢指针
 #整体思路：fast先走n步（假设要删除倒数第n个数字），然后fast和slow一起走，直到fast走完
 # fast走完之后把slow的next直接指向slow.next.next，把slow和slow.next.next中间那个slow.next当痘给挤了
 # 而slow.next刚好是倒数第n个
