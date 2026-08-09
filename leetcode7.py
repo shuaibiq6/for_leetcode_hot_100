@@ -16,4 +16,3 @@ class ListNode:
             current = current.next      #实现current的移动，保证current永远在链表的最后一位
         current.next = list1 or list2   #while list1 and list2的对立情况，当list1或list2其中之一指向none时，剩余部分接上另一条链表，两条链表存在其中之一即可
         return dummy.next               #dummy初始位置
-        
