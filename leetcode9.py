@@ -5,14 +5,14 @@
 class MinStack:
     def __init__(self):
         self.stack = []
-        self.min_stack = []#定义两个栈，min_stack是辅助栈
+        self.min_stack = []        #定义两个栈，min_stack是辅助栈
         
     def push(self,val:int) -> None:
-        self.stack.append(val)
+        self.stack.append(val)     #实现stack的正常入栈
         cur_min = val              #用cur_min获取val的值
         if self.min_stack:         #如果min_stack有数，就把cur_min赋值为min_stack栈最小的数                 
             cur_min = min(val,self.min_stack[-1])#把引入的参数和已有的栈顶做比较
-        self.min_stack.append(cur_min)#存入其中更小的一个，栈顶一直更新，新来的数字也只能存栈顶，保证栈顶始终是最小的
+        self.min_stack.append(cur_min)#如果min栈没数字，存入其中更小的一个，栈顶一直更新，新来的数字也只能存栈顶，保证栈顶始终是最小的
         
     def pop(self) -> None:#取走栈顶
         self.stack.pop()

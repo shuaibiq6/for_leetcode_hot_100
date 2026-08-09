@@ -1,6 +1,7 @@
 # 20题有效括号
 #定义的stack只存左括号
 #拿stack中的值跟mapping中的key做对应识别
+#右括号i匹配条件：栈不为空且栈顶元素和mapping[i]能对应上
 def isValid(s:str) -> bool:
     stack = []
     mapping = {')':'(','[':']','{':'}'}             #根据右括号对左括号实现匹配
