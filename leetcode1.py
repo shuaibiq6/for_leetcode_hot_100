@@ -15,9 +15,3 @@ class Solution:
 # return [i,hashmap[target-nums[i]]]   返回的两个索引值前者来自nums列表后者来自哈希表
 # 后者根据target-nums[i]得到值，返回索引
 #初始hashmap是空的，所以正常执行应该是先else再命中执行return                    
-#调用调试
-if __name__ == "__main__":
-    sol = Solution()
-    print(sol.twoSum([2, 7, 11, 15], 9))    # 输出 [1, 0]
-    print(sol.twoSum([3, 2, 4], 6))         # 输出 [2, 1]
-    print(sol.twoSum([3, 3], 6))            # 输出 [1, 0]
